@@ -38,7 +38,7 @@ param apimLoggerDescription string  = 'APIM Logger for OpenAI API'
   'Standardv2'
   'Premium'
 ])
-param apimSku string = 'Basicv2'
+param apimSku string = 'Basic'
 
 @description('The instrumentation key for Application Insights')
 param appInsightsInstrumentationKey string = ''
