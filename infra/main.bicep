@@ -109,8 +109,8 @@ module appServicePlan './core/host/appserviceplan.bicep' = {
     location: location
     tags: tags
     sku: {
-      name: 'FC1'
-      tier: 'FlexConsumption'
+    name: 'S1'
+    tier: 'Standard'
     }
   }
 }
