@@ -8,16 +8,13 @@ param runtimeName string
 param runtimeVersion string 
 param serviceName string = 'api'
 param storageAccountName string
-param deploymentStorageContainerName string
 param virtualNetworkSubnetId string = ''
-param instanceMemoryMB int = 2048
-param maximumInstanceCount int = 100
 param identityId string = ''
 param identityClientId string = ''
 
 var applicationInsightsIdentity = 'ClientId=${identityClientId};Authorization=AAD'
 
-module api '../core/host/functions-flexconsumption.bicep' = {
+module api '../core/host/functions.bicep' = {
   name: '${serviceName}-functions-module'
   params: {
     name: name
@@ -35,10 +32,7 @@ module api '../core/host/functions-flexconsumption.bicep' = {
     runtimeName: runtimeName
     runtimeVersion: runtimeVersion
     storageAccountName: storageAccountName
-    deploymentStorageContainerName: deploymentStorageContainerName
     virtualNetworkSubnetId: virtualNetworkSubnetId
-    instanceMemoryMB: instanceMemoryMB 
-    maximumInstanceCount: maximumInstanceCount
   }
 }
 

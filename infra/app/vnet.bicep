@@ -52,8 +52,8 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2023-05-01' = {
               name: 'delegation'
               id: resourceId('Microsoft.Network/virtualNetworks/subnets/delegations', vNetName, 'app', 'delegation')
               properties: {
-                //Microsoft.App/environments is the correct delegation for Flex Consumption VNet integration
-                serviceName: 'Microsoft.App/environments'
+                //Microsoft.Web/serverFarms is the correct delegation for Azure Functions VNet integration
+                serviceName: 'Microsoft.Web/serverFarms'
               }
               type: 'Microsoft.Network/virtualNetworks/subnets/delegations'
             }

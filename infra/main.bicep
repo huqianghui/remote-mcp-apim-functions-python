@@ -127,7 +127,6 @@ module api './app/api.bicep' = {
     runtimeName: 'python'
     runtimeVersion: '3.11'
     storageAccountName: storage.outputs.name
-    deploymentStorageContainerName: deploymentStorageContainerName
     identityId: apiUserAssignedIdentity.outputs.identityId
     identityClientId: apiUserAssignedIdentity.outputs.identityClientId
     appSettings: {
