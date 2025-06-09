@@ -32,7 +32,7 @@ tool_properties_save_snippets_json = json.dumps([prop.__dict__ for prop in tool_
 tool_properties_get_snippets_json = json.dumps([prop.__dict__ for prop in tool_properties_get_snippets_object])
 
 @app.route(route="health_check_trigger")
-def health_check_trigger(req: func.HttpRequest) -> func.HttpResponse:
+def http_health_check_trigger(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
     name = req.params.get('name')
