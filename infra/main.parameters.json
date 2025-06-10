@@ -12,7 +12,7 @@
       "value": "${VNET_ENABLED=true}"
     },
     "apimSku": {
-      "value": "Basicv2" 
+      "value": "Basic" 
     }
   }
 }
